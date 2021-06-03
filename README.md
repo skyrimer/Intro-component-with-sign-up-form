@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/skyrimer/Intro-component-with-sign-up-form](https://github.com/skyrimer/Intro-component-with-sign-up-form)
-- Live Site URL: [https://elegant-lamport-532f1d.netlify.app](https://elegant-lamport-532f1d.netlify.app)
+- Live Site URL: [https://determined-liskov-1eb177.netlify.app](https://determined-liskov-1eb177.netlify.app)
 
 
 ### Built with
