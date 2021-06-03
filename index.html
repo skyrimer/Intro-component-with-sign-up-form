@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/design/css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+
+<body>
+  <div class="container-wrapper">
+    <div class="container">
+      <div class="right-text">
+        <h2>Learn to code by watching others</h2>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+          but understanding how developers think is invaluable.</p>
+      </div>
+      <div class="left-form">
+        <button><span>Try it free 7 days</span> then $20/mo. thereafter</button>
+        <form action="" novalidate>
+          <div class="input-wrapper">
+            <input type="text" name="first-name" id="first-name" required>
+            <label for="first-name">First Name</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" name="last-name" id="last-name" required>
+            <label for="last-name">Last Name</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" name="email" id="email" required>
+            <label for="email">Email Address</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="password" name="password" id="password" required>
+            <label for="password">Password</label>
+          </div>
+          <input type="submit" value="Claim your free trial">
+          <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Kirill Chekmenev</a>.
+      </p>
+    </footer>
+    <script>
+      let form = document.forms[0]
+      form.addEventListener("submit", (e) => {
+        var elements = document.getElementsByTagName("input")
+        for (var i = 0; i < elements.length; i++) {
+          if (elements[i].value == "") {
+            console.log("Empty")
+            elements[i].parentElement.classList = "input-wrapper error-empty"
+            e.preventDefault()
+          }
+          else if ((elements[i].id == "email") && (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(elements[i].value))) {
+            console.log('Email is invalid')
+            elements[i].parentElement.classList = "input-wrapper error-invalid"
+            e.preventDefault()
+          } else {
+            elements[i].parentElement.classList = "input-wrapper"
+          }
+        }
+      })
+    </script>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.container-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #ff7a7a url("/images/bg-intro-desktop.png") center/cover no-repeat;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: clamp(17em, 95%, 82em);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4em;
+  min-height: 100vh;
+  margin-bottom: 5em;
+  color: white;
+}
+
+@media screen and (min-width: 60rem) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.container > div {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.container .right-text {
+  text-align: center;
+  margin-top: 10em;
+}
+
+@media screen and (min-width: 60rem) {
+  .container .right-text {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+.container .right-text h2 {
+  font-size: 1.5rem;
+  line-height: 120%;
+  margin-bottom: 0.8em;
+}
+
+@media screen and (min-width: 19rem) {
+  .container .right-text h2 {
+    font-size: calc((100vw - 19rem) / (90 - 19) * (3 - 2) + 2rem);
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .container .right-text h2 {
+    font-size: 3rem;
+  }
+}
+
+.container .left-form {
+  width: 100%;
+}
+
+.container .left-form button {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 1em;
+  background: #6055a5;
+  border-radius: 0.5em;
+  border: none;
+  color: white;
+  margin-bottom: 1em;
+  -webkit-box-shadow: 0 0.5em 0.1em 0 rgba(62, 60, 73, 0.35);
+          box-shadow: 0 0.5em 0.1em 0 rgba(62, 60, 73, 0.35);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .left-form button span {
+  font-weight: 600;
+}
+
+.container .left-form button:hover {
+  background: rgba(96, 85, 165, 0.9);
+}
+
+.container .left-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 2.5em;
+  padding: 3em 2em;
+  border-radius: 1em;
+  background: #fff;
+}
+
+@media screen and (min-width: 30rem) {
+  .container .left-form form {
+    padding: 4em;
+  }
+}
+
+.container .left-form form .input-wrapper {
+  position: relative;
+}
+
+.container .left-form form .input-wrapper.error-empty input, .container .left-form form .input-wrapper.error-invalid input {
+  border-color: #ff7a7a;
+}
+
+.container .left-form form .input-wrapper.error-empty::after, .container .left-form form .input-wrapper.error-invalid::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
+  right: 1em;
+  content: url("/images/icon-error.svg");
+}
+
+.container .left-form form .input-wrapper.error-empty::before, .container .left-form form .input-wrapper.error-invalid::before {
+  position: absolute;
+  top: 105%;
+  right: 1em;
+  color: #ff7a7a;
+  font-size: 0.8rem;
+}
+
+.container .left-form form .input-wrapper.error-empty::before {
+  content: "This field cannot be empty";
+}
+
+.container .left-form form .input-wrapper.error-invalid::before {
+  content: "Looks like this is not an email";
+}
+
+.container .left-form form .input-wrapper label {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 2em;
+  pointer-events: none;
+  color: rgba(62, 60, 73, 0.7);
+  font-size: 1.1rem;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .left-form form input {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  border: 1px solid rgba(62, 60, 73, 0.5);
+  border-radius: 0.3em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  outline: none;
+}
+
+@media screen and (min-width: 30rem) {
+  .container .left-form form input {
+    padding: 1rem 2rem;
+  }
+}
+
+.container .left-form form input[type="submit"] {
+  background: #38cc8c;
+  border: none;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 4vw;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 25rem) {
+  .container .left-form form input[type="submit"] {
+    font-size: 1rem;
+  }
+}
+
+.container .left-form form input[type="submit"]:hover {
+  background: rgba(56, 204, 140, 0.7);
+}
+
+.container .left-form form input:not([type="submit"]):valid, .container .left-form form input:not([type="submit"]):focus {
+  border-color: #6055a5;
+}
+
+.container .left-form form input:not([type="submit"]):valid + label, .container .left-form form input:not([type="submit"]):focus + label {
+  -webkit-transform: translate(-1.1em, -200%) scale(0.9);
+          transform: translate(-1.1em, -200%) scale(0.9);
+}
+
+.container .left-form form p {
+  color: #b9b6d3;
+}
+
+.container .left-form form p a {
+  text-decoration: none;
+  color: #ff7a7a;
+}
+
+.container .left-form form p a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=main.css.map */
