@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/skyrimer/Huddle-landing-page-with-a-single-introductory-section](https://github.com/skyrimer/Huddle-landing-page-with-a-single-introductory-section)
+- Solution URL: [https://github.com/skyrimer/Intro-component-with-sign-up-form](https://github.com/skyrimer/Intro-component-with-sign-up-form)
 - Live Site URL: [https://elegant-lamport-532f1d.netlify.app](https://elegant-lamport-532f1d.netlify.app)
 
 
